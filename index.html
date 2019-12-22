@@ -32,6 +32,14 @@
         margin-bottom: 40px;
       }
       
+      #infoDiv2 {
+        width: 40%;
+        height: 120px;
+        padding: 20px;
+        background-color: white;
+        margin-bottom: 40px;
+      }
+      
        @media only screen and (max-width: 600px) {
       #infoDiv {
         height: 400%;
@@ -79,6 +87,7 @@
         });
 
         view.ui.add("infoDiv", "top-right");
+        view.ui.add("infoDiv2", "bottom-left");
 
         // When animating from one slide to the other, text will be displayed.
         // Descriptive text is stored in the title property of each slide.
@@ -151,5 +160,7 @@
       <div id="content"></div>
       <button id="start-btn">Start Tour</button>
     </div>
+    <div id="infoDiv2">
+    Test</div>
   </body>
 </html>
