@@ -61,9 +61,10 @@
     <script src="https://js.arcgis.com/4.13/"></script>
 
     <script>
-      require(["esri/views/SceneView", "esri/WebScene"], function(
+      require(["esri/views/SceneView", "esri/WebScene, "esri/views/ui/DefaultUI"], function(
         SceneView,
-        WebScene
+        WebScene,
+        DefaultUI
       ) {
         /*****************************************************************************
          * This sample shows how to load a webscene and create a tour by animating
@@ -87,6 +88,7 @@
         });
 
         view.ui.add("infoDiv", "top-right");
+        view.ui.move([ compass, toggle, "zoom" ], "bottom-right");
         
         // When animating from one slide to the other, text will be displayed.
         // Descriptive text is stored in the title property of each slide.
