@@ -24,8 +24,8 @@
         width: 100%;
       }
 
-      #infoDiv {
-        width: 30%;
+     #infoDiv {
+        width: 40%;
         height: 120px;
         padding: 10px;
         background-color: white;
@@ -34,15 +34,25 @@
         border: 2px solid #969696;
         box-shadow: 5px 5px black;
       }
-      
-      
-       @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 600px) {
       #infoDiv {
         height: 400%;
         font-size: 8.5px;}
       }
-      
-      #start-btn {
+        #infoDiv2 {
+          width: 125%;
+          height: 20px;
+          padding: 1px;
+          background-color: white;
+          margin-bottom: 40px;
+          font-size: 10.5px;
+          font-weight: bold;
+        }
+       @media only screen and (max-width: 600px) {
+          #infoDiv2 {
+          margin-bottom: -25px;}
+       }
+      button {
         display: block;
         margin: 10px auto;
         border: 1px solid #0079c1;
@@ -52,17 +62,17 @@
         padding: 4px 4px;
         cursor: pointer;
       }
-         
-         
+      .esri-ui-manual-container>.esri-component {
+        display: none !important;
+      } 
     </style>
 
     <script src="https://js.arcgis.com/4.13/"></script>
 
     <script>
-      require(["esri/views/SceneView", "esri/WebScene, "esri/views/ui/DefaultUI"], function(
+      require(["esri/views/SceneView", "esri/WebScene"], function(
         SceneView,
-        WebScene,
-        DefaultUI
+        WebScene
       ) {
         /*****************************************************************************
          * This sample shows how to load a webscene and create a tour by animating
@@ -86,7 +96,8 @@
         });
 
         view.ui.add("infoDiv", "top-right");
-        
+        view.ui.add("infoDiv2", "bottom-left");
+
         // When animating from one slide to the other, text will be displayed.
         // Descriptive text is stored in the title property of each slide.
         // If you create the slides with the JavaScript API then you can alternatively
@@ -160,3 +171,4 @@
     </div>
   </body>
 </html>
+
